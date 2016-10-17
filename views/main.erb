@@ -8,34 +8,34 @@
     <th>Code</th>
   </thead>
   <tbody>
-      <% @customers.each do |customer| %>
-        <tr class="clickable-row" data-href="/customers/<%= customer.id %>">
-          <td><a href="/customers/<%= customer.id %>"><%= customer.id %></a></td>
-          <td><%= customer.name %></td>
-          <td><%= customer.surname %></td>
-          <td><%= customer.code %></td>
-          <td><%= customer.age %></td>
-        </tr>
-      <% end %>
-    </tbody>
+    <% @customers.each do |customer| %>
+    <tr class="clickable-row" data-href="/customers/<%= customer.id %>">
+      <td><a href="/customers/<%= customer.id %>"><%= customer.id %></a></td>
+      <td><%= customer.name %></td>
+      <td><%= customer.surname %></td>
+      <td><%= customer.code %></td>
+      <td><%= customer.age %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<a href="/new" class="btn btn-defaul">New Customer</a>
+<a href="/new" class="btn btn-default">New Customer</a>
 
 
 <div class="text-center">
   <ul class="pagination pagination-lg">
     <li><a href="/?page=0">First</a></li>
     <% if @page > 0 %>
-      <li><a href="/?page=<%= @page - 1 %>">Previous</a></li>
+    <li><a href="/?page=<%= @page - 1 %>">Previous</a></li>
     <% end %>
     <li><a href="/?page=<%= @page - 1 %>"><%= @page - 1 %></a></li>
     <li class="active"><a href="#"><%= @page %></a></li>
     <li><a href="/?page=<%= @page + 1 %>"><%= @page + 1 %></a></li>
-  <% if @page < @last_page %>
+    <% if @page < @last_page %>
     <li><a href="/?page=<%= @page + 1 %>">Next</a></li>
     <li><a href="/?page=<%= @last_page %>">Last</a></li>
-  <% end %>
+    <% end %>
   </ul>
 </div>
 
@@ -43,9 +43,9 @@
 <script>
 
 jQuery(document).ready(function($) {
-    $(".clickable-row").click(function() {
-        window.document.location = $(this).data("href");
-    });
+  $(".clickable-row").click(function() {
+    window.document.location = $(this).data("href");
+  });
 });
 
 </script>

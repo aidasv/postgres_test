@@ -1,42 +1,42 @@
 <h3>New Customer window</h3>
 
 <form action="/new" method="post">
-<td><input name="id" type="hidden" value="<%=@customer.id %>"></td>
-<table class="table table-bordered">
+  <td><input name="id" type="hidden" value="<%=@customer.id %>"></td>
+  <table class="table table-bordered">
     <tr>
       <td><b>Parameter</b></td>
       <td><b>Value</b></td>
 
-  </th>
-  <tbody>
-    <tr>
-      <td>Name</td>
-      <td><input name="name" type="text" value="<%=@customer.name %>"</td>
-    </tr>
+    </th>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td><input name="name" type="text" value="<%=@customer.name %>"</td>
+      </tr>
 
-    <tr>
-      <td>Surname</td>
-      <td><input name="surname" type="text" value="<%=@customer.surname %>"></td>
-    </tr>
+      <tr>
+        <td>Surname</td>
+        <td><input name="surname" type="text" value="<%=@customer.surname %>"></td>
+      </tr>
 
-    <tr>
-      <td>Age</td>
-      <td><input name="age" type="number" value="<%=@customer.age %>"></td>
-    </tr>
+      <tr>
+        <td>Age</td>
+        <td><input name="age" type="number" value="<%=@customer.age %>"></td>
+      </tr>
 
-    <tr>
-      <td>Code</td>
-      <td><input name="code" type="number" value="<%=@customer.code %>"></td>
-    </tr>
+      <tr>
+        <td>Code</td>
+        <td><input name="code" type="number" value="<%=@customer.code %>"></td>
+      </tr>
 
-    <tr>
-      <td>ID</td>
-      <td><%=@customer.id %></td>
-    </tr>
+      <tr>
+        <td>ID</td>
+        <td><%=@customer.id %></td>
+      </tr>
 
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<button type="submit" class="btn btn-warning">Save</button>
+  <button type="submit" class="btn btn-warning">Save</button>
 
 </form>
