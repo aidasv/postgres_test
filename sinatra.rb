@@ -42,6 +42,17 @@ class MyApp < Sinatra::Base
 		 	redirect "customers/#{params[:id]}"
 		  end
 
+			get '/new' do
+				@customer = Customer.new(name: '', surname: '', age: nil, code: nil, id: nil)
+				erb :new
+			end
+
+			post '/new' do
+				@customer = Customer.new(name: params[:name], surname: params[:surname],
+				                         code: params[:code], age: params[:age], id:nil)
+				@customer.create
+				erb :show_customer
+			end
 
       def pg
         $pg
